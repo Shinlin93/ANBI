@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #0B2545;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(247, 243, 235, 0.9);
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: #F7F3EB;
+  color: #0B2545;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 0 0 4px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+.container-content {
+  @apply mx-auto max-w-content px-6 md:px-8;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+/* Eyebrow label — default variant for light/cream backgrounds (AA: 6.4:1) */
+.eyebrow {
+  @apply font-mono text-xs font-semibold uppercase tracking-[0.14em] text-gold-deep;
+}
+/* Eyebrow label — variant for dark navy backgrounds (AA: 9.4:1) */
+.eyebrow-on-navy {
+  @apply font-mono text-xs font-semibold uppercase tracking-[0.14em] text-gold-soft;
+}
+
+/* Recurring "ledger rule" double-line device */
+.ledger-rule {
+  border: none;
+  height: 0;
+  border-top: 3px solid var(--tw-ledger-color, #0B2545);
+  margin-top: 6px;
+  position: relative;
+}
+.ledger-rule::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5px;
+  border-top: 1px solid var(--tw-ledger-color, #0B2545);
+  opacity: 0.55;
+}
+.ledger-rule.light {
+  --tw-ledger-color: #EDE6D6;
+}
+.ledger-rule.on-navy {
+  --tw-ledger-color: rgba(247, 243, 235, 0.4);
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-[3px] bg-gold px-6 py-3.5 text-sm font-semibold text-navy-deep transition-all duration-200 hover:brightness-95;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-[3px] border border-cream/45 px-6 py-3.5 text-sm font-medium text-cream transition-all duration-200 hover:bg-cream/10;
+}
+
+.card-lift {
+  @apply transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card;
+}
+
+/* Mouse-follow spotlight highlight (SpotlightCard.jsx) */
+.spotlight-card-glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    380px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+    var(--spotlight-color, rgba(182, 134, 44, 0.14)),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.spotlight-card:hover .spotlight-card-glow {
+  opacity: 1;
+}
+@media (hover: none) {
+  .spotlight-card-glow {
+    display: none;
+  }
+}
+
+/* The verification stamp — hero visual anchor */
+.stamp-ring {
+  width: 96px;
+  height: 96px;
+  border-radius: 9999px;
+  border: 2px solid #E4C77A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  position: relative;
+  transform: rotate(-8deg);
+}
+.stamp-ring::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: 9999px;
+  border: 1px dashed rgba(228, 199, 122, 0.6);
+}
+
+.mini-stamp-shape {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-6deg);
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+.ledger-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .ledger-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}
+
+/* ===== Multi-tone mesh backgrounds ===== */
+/* Layered radial glows (teal + plum + gold) over the navy base — richer
+   than a flat gradient, still grounded in the trust/professional palette.
+   Contrast-checked: even at full glow strength, cream text stays well
+   above AA against the resulting blend (see README). */
+.mesh-navy {
+  background:
+    radial-gradient(ellipse 620px 620px at 92% -8%, rgba(14, 110, 119, 0.35), transparent 60%),
+    radial-gradient(ellipse 520px 520px at -8% 108%, rgba(91, 74, 138, 0.30), transparent 60%),
+    radial-gradient(ellipse 900px 900px at 45% 40%, rgba(182, 134, 44, 0.08), transparent 70%),
+    linear-gradient(135deg, #0B2545 0%, #14335C 100%);
+}
+
+/* Very light per-section tint washes, layered over the cream/white base —
+   subtle enough to not disturb text contrast, just enough to give each
+   category section its own quiet identity while scrolling. */
+.tint-teal {
+  background: linear-gradient(180deg, rgba(14, 110, 119, 0.05) 0%, rgba(247, 243, 235, 0) 45%);
+}
+.tint-stamp {
+  background: linear-gradient(180deg, rgba(140, 59, 50, 0.05) 0%, rgba(247, 243, 235, 0) 45%);
+}
+.tint-plum {
+  background: linear-gradient(180deg, rgba(91, 74, 138, 0.05) 0%, rgba(247, 243, 235, 0) 45%);
+}
+.tint-forest {
+  background: linear-gradient(180deg, rgba(53, 94, 69, 0.05) 0%, rgba(247, 243, 235, 0) 45%);
+}
+
+/* Slow ambient float for hero background blobs */
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-14px, 18px) scale(1.04); }
+}
+@keyframes float-slow-reverse {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(16px, -14px) scale(0.97); }
+}
+.animate-float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+}
+.animate-float-slow-reverse {
+  animation: float-slow-reverse 11s ease-in-out infinite;
+}
+
+/* Gentle attention pulse for the sticky WhatsApp button */
+@keyframes gentle-pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); }
+  100% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+}
+.animate-pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  animation: gentle-pulse-ring 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-slow-reverse,
+  .animate-pulse-ring::before {
+    animation: none;
+  }
+}
+
+/* ===== Glassmorphism ===== */
+/* Opacity chosen deliberately high (not the "very see-through" look) so text
+   contrast stays reliable regardless of what's blurred behind the panel —
+   see the contrast check notes in PR/README. Falls back to a solid, fully
+   opaque panel on browsers without backdrop-filter support. */
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(11, 37, 69, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.glass-dark {
+  background: rgba(11, 37, 69, 0.72);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(247, 243, 235, 0.14);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.glass-gold {
+  background: rgba(228, 199, 122, 0.12);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(228, 199, 122, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Graceful fallback: if backdrop-filter isn't supported, make the tint
+   solid enough to stand on its own without the blur to lean on. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-light {
+    background: #fdfcfa;
+  }
+  .glass-dark {
+    background: #0e2c53;
+  }
+  .glass-gold {
+    background: #1a3358;
+  }
+}
