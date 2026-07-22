@@ -1,19 +1,20 @@
 import { motion } from 'framer-motion'
-import ImagePlaceholder from './ImagePlaceholder.jsx'
+import heroImg from '../assets/hero.png'
 import Reveal from './motion/Reveal.jsx'
 import SplitText from './motion/SplitText.jsx'
 import MagneticButton from './motion/MagneticButton.jsx'
 import CountUp from './motion/CountUp.jsx'
 import { COMPANY } from '../data/company.js'
-import { CATEGORY_THEME } from '../data/categoryTheme.js'
 import { WA_LINK } from '../utils/whatsapp.js'
 
 const FLOATING_CARDS = [
   {
     id: 'akuntansi',
     label: 'Akuntansi',
-    position: 'right-[-14px] top-6 sm:right-[-24px]',
+    sublabel: 'Pencatatan & Pembukuan',
+    position: 'right-[-14px] top-[4%] sm:right-[-38px]',
     floatClass: 'animate-float-slow',
+    dotClass: 'bg-teal',
     icon: (
       <path d="M4 19V10M10 19V5M16 19v-7M20 19H4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     ),
@@ -21,17 +22,35 @@ const FLOATING_CARDS = [
   {
     id: 'pajak',
     label: 'Perpajakan',
-    position: 'left-[-14px] top-[38%] sm:left-[-28px]',
+    sublabel: 'Perhitungan & Pelaporan Pajak',
+    position: 'right-[-24px] top-[30%] sm:right-[-54px]',
     floatClass: 'animate-float-slow-reverse',
+    dotClass: 'bg-gold',
     icon: (
       <path d="M14.7 6.3a1 1 0 010 1.4L12.4 10l4.9 4.9a3 3 0 11-4.2 4.2L8.2 14.2l-2.3 2.3a1 1 0 01-1.4-1.4l2.3-2.3-1-1a3 3 0 013-3l1 1 2.3-2.3a1 1 0 011.4 0z" fill="currentColor" strokeWidth="0" />
     ),
   },
   {
+    id: 'audit',
+    label: 'Audit',
+    sublabel: 'Pemeriksaan & Assurance',
+    position: 'right-[-14px] top-[58%] sm:right-[-38px]',
+    floatClass: 'animate-float-slow',
+    dotClass: 'bg-[#3b82c4]',
+    icon: (
+      <>
+        <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
+        <path d="M21 21l-4.3-4.3M8.5 11l1.8 1.8L14 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      </>
+    ),
+  },
+  {
     id: 'legalitas',
     label: 'Legalitas',
-    position: 'right-[-10px] bottom-4 sm:right-[-20px]',
-    floatClass: 'animate-float-slow',
+    sublabel: 'Perizinan & Kepatuhan Usaha',
+    position: 'right-[-24px] bottom-[2%] sm:right-[-54px]',
+    floatClass: 'animate-float-slow-reverse',
+    dotClass: 'bg-forest',
     icon: (
       <path d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     ),
@@ -129,29 +148,35 @@ export default function Hero() {
         {/* Right: hero image + floating category chips */}
         <Reveal delay={0.2} className="relative mx-auto w-full max-w-[440px] lg:max-w-none">
           <div className="aspect-[4/5] w-full overflow-hidden rounded-lg shadow-card sm:aspect-square">
-            <ImagePlaceholder
-              assetKey="hero-dummy-1"
-              alt="Konsultan ANBI berdiskusi dengan klien"
+            <img
+              src={heroImg}
+              alt="Meja kerja konsultan dengan laptop menampilkan dashboard laporan keuangan"
+              className="h-full w-full object-cover object-[72%_45%]"
             />
           </div>
 
           {FLOATING_CARDS.map((card, i) => (
             <div key={card.id} className={`absolute ${card.position} ${card.floatClass}`}>
               <motion.div
-                className="glass-light flex items-center gap-2.5 rounded-md px-4 py-3"
+                className="flex items-center gap-3 rounded-2xl border border-white/15 bg-navy-deep/35 px-4 py-3 shadow-[0_8px_28px_-6px_rgba(4,12,28,0.55)] backdrop-blur-xl backdrop-saturate-150"
                 initial={{ opacity: 0, scale: 0.85 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.06 }}
                 transition={{ duration: 0.5, delay: 0.5 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
               >
-                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${CATEGORY_THEME[card.id]?.badgeBg || 'bg-gold-soft/25'} ${CATEGORY_THEME[card.id]?.badgeText || 'text-navy-deep'}`}>
+                <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white ${card.dotClass}`}>
                   <svg width="16" height="16" viewBox="0 0 24 24">
                     {card.icon}
                   </svg>
                 </span>
-                <span className="text-[13px] font-semibold text-navy-deep">
-                  {card.label}
+                <span className="whitespace-nowrap">
+                  <span className="block text-[13.5px] font-semibold leading-tight text-cream">
+                    {card.label}
+                  </span>
+                  <span className="block text-[11px] leading-tight text-cream/65">
+                    {card.sublabel}
+                  </span>
                 </span>
               </motion.div>
             </div>
