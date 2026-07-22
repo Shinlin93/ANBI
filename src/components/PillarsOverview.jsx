@@ -2,29 +2,7 @@ import { CATEGORIES } from '../data/categories.js'
 import { CATEGORY_THEME } from '../data/categoryTheme.js'
 import Reveal from './motion/Reveal.jsx'
 import SpotlightCard from './motion/SpotlightCard.jsx'
-
-const ICONS = {
-  akuntansi: (
-    <path d="M4 19V10M10 19V5M16 19v-7M20 19H4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-  ),
-  pajak: (
-    <>
-      <rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
-      <path d="M9 8h6M9 12h6M9 16h3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </>
-  ),
-  audit: (
-    <>
-      <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
-      <path d="M21 21l-4.3-4.3M8.5 11l1.8 1.8L14 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    </>
-  ),
-  legalitas: (
-    <>
-      <path d="M12 3v18M6 8l-3 6a3 3 0 006 0l-3-6zM18 8l-3 6a3 3 0 006 0l-3-6zM6 8h12M8 21h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    </>
-  ),
-}
+import ImagePlaceholder from './ImagePlaceholder.jsx'
 
 export default function PillarsOverview() {
   return (
@@ -52,11 +30,13 @@ export default function PillarsOverview() {
                   spotlightColor={theme.spotlight}
                   className="card-lift group relative flex h-full flex-col rounded-lg border border-cream-dim bg-white p-7"
                 >
-                  <span className={`flex h-11 w-11 items-center justify-center rounded-md ${theme.badgeBg} ${theme.badgeText}`}>
-                    <svg width="22" height="22" viewBox="0 0 24 24">
-                      {ICONS[cat.id]}
-                    </svg>
-                  </span>
+                  <div className={`h-14 w-14 overflow-hidden rounded-md ${theme.badgeBg}`}>
+                    <ImagePlaceholder
+                      assetKey={`pillar-logo-${cat.id}`}
+                      alt=""
+                      className="rounded-md border-none bg-transparent p-2"
+                    />
+                  </div>
                   <h3 className="mt-5 font-display text-lg font-semibold text-navy-deep">
                     {cat.name}
                   </h3>
