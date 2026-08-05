@@ -48,7 +48,7 @@ export const CATEGORY_THEME = {
 
   sectionTint: 'bg-slate-100',
 
-  spotlight: 'rgba(20,44,74,0.14)',,
+  spotlight: 'rgba(20,44,74,0.14)',
 
   },
 }
