@@ -1,91 +1,55 @@
-export const PRICING_TIERS = [
+// Nominal harga sengaja tidak dipublikasikan — mengikuti positioning ANBI di company
+// profile: "Penawaran tertulis di awal, tanpa biaya tersembunyi." Biaya disesuaikan
+// dengan kebutuhan dan skala tiap klien melalui konsultasi awal.
+
+export const PRICING_PRINCIPLES = [
   {
-    tier: 'Rintisan',
-    title: 'Untuk UMKM',
-    who: 'Usaha kecil yang baru mulai tertib administrasi',
-    amount: 'Rp 750rb',
-    period: '/bulan',
-    featured: false,
-    features: [
-      'Pembukuan dasar bulanan',
-      'Lapor SPT Masa (PPh 21/25)',
-      'Rekonsiliasi kas & bank',
-      'Konsultasi via WhatsApp/email',
-      'Laporan keuangan triwulanan',
-    ],
-    ctaLabel: 'Pilih Paket',
+    title: 'Biaya Transparan',
+    description:
+      'Penawaran tertulis di awal — tanpa biaya tersembunyi di kemudian hari.',
   },
   {
-    tier: 'Berkembang',
-    title: 'Untuk Usaha Menengah',
-    who: 'Usaha dengan transaksi lebih aktif dan tim yang bertumbuh',
-    amount: 'Rp 2,5jt',
-    period: '/bulan',
-    featured: true,
-    features: [
-      'Pembukuan lengkap bulanan',
-      'Lapor SPT Masa & Tahunan',
-      'Laporan manajemen bulanan',
-      'Konsultasi tak terbatas',
-      'Pendampingan e-Faktur/Coretax',
-      'Review kepatuhan tahunan',
-    ],
-    ctaLabel: 'Pilih Paket',
+    title: 'Proses Jelas & Terukur',
+    description:
+      'Tahapan kerja dan estimasi waktu disepakati sejak awal penugasan.',
   },
   {
-    tier: 'Korporat',
-    title: 'Untuk Perusahaan',
-    who: 'Kebutuhan multi-entitas, audit, dan advisory strategis',
-    amount: 'Custom',
-    period: '— sesuai skala',
-    featured: false,
-    features: [
-      'Semua fitur paket Berkembang',
-      'Virtual CFO & advisory keuangan',
-      'Liaison audit laporan keuangan',
-      'Tax planning & pendampingan pemeriksaan',
-      'Prioritas SLA & kunjungan rutin',
-    ],
-    ctaLabel: 'Diskusikan Kebutuhan',
+    title: 'Pendampingan Personal',
+    description:
+      'Satu konsultan yang memahami bisnis Anda dari awal sampai selesai.',
   },
 ]
 
-export const ONE_TIME_SERVICES = [
+export const VALUE_ITEMS = [
   {
-    name: 'Pendirian PT (Perseroan Terbatas)',
-    description: 'Akta notaris, pengesahan Kemenkumham, NPWP badan, NIB',
-    price: 'mulai Rp 4.500.000',
-    note: 'proses ±14 hari kerja',
+    name: 'Akses Pembiayaan',
+    description: 'Membuka pintu kredit perbankan, investor, dan program pemerintah.',
+    tag: 'Kredit & Investor',
   },
   {
-    name: 'Pendirian CV',
-    description: 'Akta notaris dan pendaftaran badan usaha perseorangan',
-    price: 'mulai Rp 3.000.000',
-    note: 'proses ±10 hari kerja',
+    name: 'Tender & Kemitraan',
+    description: 'Syarat utama mengikuti tender dan bermitra dengan perusahaan besar.',
+    tag: 'Peluang Bisnis',
   },
   {
-    name: 'Pengurusan NIB & Izin Usaha (OSS)',
-    description: 'Termasuk konsultasi KBLI yang sesuai bidang usaha',
-    price: 'mulai Rp 1.500.000',
-    note: 'proses ±5 hari kerja',
+    name: 'Kepercayaan Pelanggan',
+    description: 'Usaha berbadan hukum lebih dipercaya pelanggan dan pemasok.',
+    tag: 'Reputasi',
   },
   {
-    name: 'Penyusunan Laporan Keuangan Tahunan',
-    description: 'Neraca, laba rugi, arus kas — siap untuk bank atau pajak',
-    price: 'mulai Rp 2.000.000',
-    note: 'tergantung volume transaksi',
+    name: 'Perlindungan Hukum',
+    description: 'Aset pribadi terpisah dari risiko usaha, kontrak lebih kuat.',
+    tag: 'Keamanan Aset',
   },
   {
-    name: 'Audit Laporan Keuangan',
+    name: 'Kepatuhan Pajak',
+    description: 'Terhindar dari sanksi dan denda, laporan keuangan lebih rapi.',
+    tag: 'Bebas Sanksi',
+  },
+  {
+    name: 'Siap Berkembang',
     description:
-      'Audit independen oleh auditor berlisensi, opini wajar tanpa pengecualian',
-    price: 'mulai Rp 8.000.000',
-    note: 'tergantung skala & kompleksitas',
-  },
-  {
-    name: 'Pelaporan SPT Tahunan Badan',
-    description: 'Termasuk rekonsiliasi fiskal dan perhitungan PPh Badan',
-    price: 'mulai Rp 1.750.000',
-    note: 'per tahun pajak',
+      'Fondasi legal yang rapi memudahkan ekspansi dan penambahan cabang.',
+    tag: 'Skalabilitas',
   },
 ]
