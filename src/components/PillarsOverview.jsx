@@ -6,7 +6,7 @@ import CategoryBadge from './CategoryBadge.jsx'
 
 export default function PillarsOverview() {
   return (
-    <section id="rincian-layanan" className="section-padding bg-white" aria-labelledby="pillars-heading">
+    <section id="rincian-layanan" className="section-padding bg-cream" aria-labelledby="pillars-heading">
       <div className="container-content">
         <Reveal className="mb-12 max-w-[640px]">
           <span className="eyebrow">Rincian Layanan</span>
@@ -28,7 +28,7 @@ export default function PillarsOverview() {
                   as="a"
                   href={`#${cat.id}`}
                   spotlightColor={theme.spotlight}
-                  className="card-lift group relative flex h-full flex-col overflow-hidden rounded-lg border border-cream-dim bg-white p-7"
+                  className="card-lift group relative flex h-full flex-col overflow-hidden rounded-lg border border-cream-dim bg-white p-7 shadow-[0_1px_3px_rgba(15,23,42,0.05)]"
                 >
                   <span
                     className={`absolute inset-x-0 top-0 h-[3px] scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${theme.accentBg}`}

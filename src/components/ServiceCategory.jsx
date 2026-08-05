@@ -38,21 +38,25 @@ export default function ServiceCategory({ category, isLast }) {
             <Reveal key={service.title} delay={(i % 3) * 0.07}>
               <SpotlightCard
                 spotlightColor={theme.spotlight}
-                className="card-lift relative h-full overflow-hidden rounded-md border border-cream-dim bg-white px-[22px] py-6"
+                className="card-lift flex h-full gap-4 rounded-md border border-cream-dim bg-white py-6 pr-[20px] shadow-[0_1px_3px_rgba(15,23,42,0.05)]"
               >
+                {/* Garis aksen sebagai elemen flex biasa (bukan absolute)
+                    supaya tidak pernah menabrak teks di sebelahnya. */}
                 <span
-                  className={`absolute left-0 top-0 h-full w-[3px] ${theme.accentBg} opacity-70`}
+                  className={`w-[3px] shrink-0 self-stretch rounded-full ${theme.accentBg} opacity-70`}
                   aria-hidden="true"
                 />
-                <span className={`font-mono text-xs font-semibold ${theme.badgeText}`} aria-hidden="true">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <h3 className="mt-2.5 mb-2 text-[16.5px] font-semibold text-navy-deep">
-                  {service.title}
-                </h3>
-                <p className="text-[13.5px] leading-relaxed text-ink/70">
-                  {service.description}
-                </p>
+                <div className="min-w-0">
+                  <span className={`font-mono text-xs font-semibold ${theme.badgeText}`} aria-hidden="true">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="mt-2.5 mb-2 text-[16.5px] font-semibold text-navy-deep">
+                    {service.title}
+                  </h3>
+                  <p className="text-[13.5px] leading-relaxed text-ink/70">
+                    {service.description}
+                  </p>
+                </div>
               </SpotlightCard>
             </Reveal>
           ))}

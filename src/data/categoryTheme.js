@@ -2,6 +2,10 @@
 // sendiri. Semua class Tailwind ditulis LENGKAP (bukan digabung dari
 // variabel/string manipulation) supaya tetap terdeteksi oleh Tailwind JIT
 // scanner saat build.
+//
+// sectionTint sengaja dibuat sebagai tint warna kategori yang sangat lembut
+// (bukan bg-cream/bg-white polos) supaya kartu putih di atasnya terlihat
+// kontras dan lebih fokus bagi pengguna, bukan menyatu dengan background.
 
 export const CATEGORY_THEME = {
   pendirian: {
@@ -9,7 +13,7 @@ export const CATEGORY_THEME = {
     badgeText: 'text-teal',
     accentBorder: 'border-teal',
     accentBg: 'bg-teal',
-    sectionTint: 'bg-cream',
+    sectionTint: 'bg-teal/[0.045]',
     spotlight: 'rgba(14, 110, 119, 0.14)',
   },
   perizinan: {
@@ -17,7 +21,7 @@ export const CATEGORY_THEME = {
     badgeText: 'text-gold',
     accentBorder: 'border-gold',
     accentBg: 'bg-gold',
-    sectionTint: 'bg-white',
+    sectionTint: 'bg-gold/[0.06]',
     spotlight: 'rgba(228, 199, 122, 0.16)',
   },
   akuntansi: {
@@ -25,7 +29,7 @@ export const CATEGORY_THEME = {
     badgeText: 'text-forest',
     accentBorder: 'border-forest',
     accentBg: 'bg-forest',
-    sectionTint: 'bg-cream',
+    sectionTint: 'bg-forest/[0.045]',
     spotlight: 'rgba(45, 106, 79, 0.14)',
   },
   hr: {
@@ -33,7 +37,7 @@ export const CATEGORY_THEME = {
     badgeText: 'text-plum',
     accentBorder: 'border-plum',
     accentBg: 'bg-plum',
-    sectionTint: 'bg-white',
+    sectionTint: 'bg-plum/[0.05]',
     spotlight: 'rgba(91, 74, 138, 0.16)',
   },
   audit: {
@@ -41,7 +45,7 @@ export const CATEGORY_THEME = {
     badgeText: 'text-stamp',
     accentBorder: 'border-stamp',
     accentBg: 'bg-stamp',
-    sectionTint: 'bg-cream',
+    sectionTint: 'bg-stamp/[0.045]',
     spotlight: 'rgba(178, 66, 46, 0.14)',
   },
 }
