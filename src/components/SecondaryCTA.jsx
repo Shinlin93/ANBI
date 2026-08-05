@@ -5,7 +5,7 @@ import MagneticButton from './motion/MagneticButton.jsx'
 
 const TRUST_BADGES = [
   { label: 'Konsultasi Awal Gratis' },
-  { label: 'Respons dalam 24 Jam' },
+  { label: 'Penawaran Tertulis, Tanpa Biaya Tersembunyi' },
 ]
 
 export default function SecondaryCTA() {
@@ -25,7 +25,7 @@ export default function SecondaryCTA() {
       <div className="container-content relative text-center">
         <h2 className="mx-auto max-w-[600px] font-display text-[30px] font-semibold text-navy-deep sm:text-[36px]">
           <SplitText
-            text={`Siap merapikan administrasi bisnis Anda di ${year}?`}
+            text={`Siap mengurus legalitas usaha Anda di ${year}?`}
             as="span"
             wordClassName="text-navy-deep"
           />
@@ -33,8 +33,8 @@ export default function SecondaryCTA() {
 
         <Reveal delay={0.2}>
           <p className="mx-auto mt-4 max-w-[480px] text-[15.5px] text-ink/70">
-            Biarkan tim kami memandu kepatuhan usaha Anda dengan penuh
-            keyakinan — mulai dari konsultasi awal yang gratis.
+            Jadikan kami mitra jangka panjang Anda dalam mengurus legalitas
+            dan kepatuhan usaha — mulai dari konsultasi awal yang gratis.
           </p>
 
           <MagneticButton

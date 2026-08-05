@@ -9,20 +9,20 @@ import { WA_LINK } from '../utils/whatsapp.js'
 
 const FLOATING_CARDS = [
   {
-    id: 'akuntansi',
-    label: 'Akuntansi',
-    sublabel: 'Pencatatan & Pembukuan',
+    id: 'pendirian',
+    label: 'Pendirian & Legalitas',
+    sublabel: 'Akta, SK Kemenkumham & NPWP',
     position: 'right-[-14px] top-[4%] sm:right-[-38px]',
     floatClass: 'animate-float-slow',
     dotClass: 'bg-teal',
     icon: (
-      <path d="M4 19V10M10 19V5M16 19v-7M20 19H4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     ),
   },
   {
-    id: 'pajak',
-    label: 'Perpajakan',
-    sublabel: 'Perhitungan & Pelaporan Pajak',
+    id: 'perizinan',
+    label: 'Perizinan Usaha',
+    sublabel: 'NIB, OSS-RBA & Sertifikasi',
     position: 'right-[-24px] top-[30%] sm:right-[-54px]',
     floatClass: 'animate-float-slow-reverse',
     dotClass: 'bg-gold',
@@ -31,28 +31,28 @@ const FLOATING_CARDS = [
     ),
   },
   {
-    id: 'audit',
-    label: 'Audit',
-    sublabel: 'Pemeriksaan & Assurance',
+    id: 'akuntansi',
+    label: 'Pajak & Akuntansi',
+    sublabel: 'Pembukuan & Pelaporan SPT',
     position: 'right-[-14px] top-[58%] sm:right-[-38px]',
     floatClass: 'animate-float-slow',
+    dotClass: 'bg-forest',
+    icon: (
+      <path d="M4 19V10M10 19V5M16 19v-7M20 19H4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    ),
+  },
+  {
+    id: 'audit',
+    label: 'Audit & Konsultasi',
+    sublabel: 'Kepatuhan & Strategi Bisnis',
+    position: 'right-[-24px] bottom-[2%] sm:right-[-54px]',
+    floatClass: 'animate-float-slow-reverse',
     dotClass: 'bg-[#3b82c4]',
     icon: (
       <>
         <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
         <path d="M21 21l-4.3-4.3M8.5 11l1.8 1.8L14 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
       </>
-    ),
-  },
-  {
-    id: 'legalitas',
-    label: 'Legalitas',
-    sublabel: 'Perizinan & Kepatuhan Usaha',
-    position: 'right-[-24px] bottom-[2%] sm:right-[-54px]',
-    floatClass: 'animate-float-slow-reverse',
-    dotClass: 'bg-forest',
-    icon: (
-      <path d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     ),
   },
 ]
@@ -71,26 +71,26 @@ export default function Hero() {
           <Reveal>
             <span className="eyebrow-on-navy inline-flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-gold-soft" aria-hidden="true" />
-              Dipercaya 100+ UMKM &amp; Perusahaan di Jawa Timur
+              {COMPANY.tagline}
             </span>
           </Reveal>
 
           <h1 className="mt-5 font-display text-[32px] font-semibold leading-[1.15] sm:text-[38px] lg:text-[44px]">
             <SplitText
-              text="Kepatuhan usaha Anda,"
+              text="Legalitas usaha Anda,"
               as="span"
               className="block"
               wordClassName="text-cream"
             />
             <SplitText
-              text="ditangani dengan"
+              text="kami urus dengan"
               as="span"
               className="block"
               wordClassName="text-cream"
               delay={0.25}
             />{' '}
             <SplitText
-              text="presisi seorang akuntan."
+              text="satu pintu, tanpa ribet."
               as="span"
               className="inline"
               wordClassName="text-gold-soft"
@@ -100,17 +100,14 @@ export default function Hero() {
 
           <Reveal delay={0.15}>
             <p className="mt-5 max-w-[520px] text-[16.5px] leading-relaxed text-cream/80">
-              ANBI Consulting mendampingi UMKM dan perusahaan menengah di Jawa
-              Timur dalam akuntansi, perpajakan, audit, dan perizinan usaha —
-              dengan harga yang transparan dan bersahabat untuk skala bisnis
-              Anda.
+              {COMPANY.about}
             </p>
           </Reveal>
 
           <Reveal delay={0.25}>
             <div className="mt-7 flex flex-wrap gap-3.5">
-              <MagneticButton as="a" href="#harga" className="btn-primary">
-                Lihat Paket Harga
+              <MagneticButton as="a" href="#estimasi" className="btn-primary">
+                Dapatkan Penawaran
               </MagneticButton>
               <MagneticButton
                 as="a"
@@ -150,7 +147,7 @@ export default function Hero() {
           <div className="aspect-[4/5] w-full overflow-hidden rounded-lg shadow-card sm:aspect-square">
             <img
               src={heroImg}
-              alt="Meja kerja konsultan dengan laptop menampilkan dashboard laporan keuangan"
+              alt="Meja kerja konsultan dengan dokumen legalitas dan laptop"
               className="h-full w-full object-cover object-[72%_45%]"
             />
           </div>

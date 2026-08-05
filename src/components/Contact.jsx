@@ -38,12 +38,13 @@ export default function Contact() {
         <Reveal className="flex flex-col items-start justify-between gap-8 rounded-[10px] bg-stamp px-8 py-14 text-cream sm:flex-row sm:items-center sm:px-12">
           <div>
             <h2 className="max-w-[480px] font-display text-[28px] font-semibold text-cream">
-              Siap merapikan administrasi bisnis Anda?
+              Mari bekerja sama
             </h2>
             <p className="mt-2 max-w-[480px] text-[14.5px] text-cream/80">
-              Konsultasi awal gratis, tanpa kewajiban lanjut. Tim ANBI
-              Consulting siap membantu dari Surabaya untuk seluruh Jawa
-              Timur.
+              Konsultasikan kebutuhan legalitas dan pengembangan bisnis Anda
+              bersama kami — konsultasi awal gratis, tanpa kewajiban lanjut.
+              Berbasis di Sidoarjo, siap melayani seluruh Jawa Timur dan
+              Indonesia.
             </p>
           </div>
           <MagneticButton
@@ -141,7 +142,7 @@ export default function Contact() {
                 value={form.message}
                 onChange={handleChange}
                 className="mt-1.5 w-full rounded-[3px] border border-ink/15 px-4 py-3 text-sm outline-none transition-colors focus:border-gold"
-                placeholder="Ceritakan kebutuhan bisnis Anda"
+                placeholder="Ceritakan kebutuhan legalitas atau perizinan usaha Anda"
               />
             </div>
 

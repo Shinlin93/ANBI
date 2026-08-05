@@ -5,11 +5,11 @@ import { WA_LINK } from '../utils/whatsapp.js'
 import MagneticButton from './motion/MagneticButton.jsx'
 
 const NAV_LINKS = [
-  { label: 'Akuntansi', href: '#akuntansi' },
-  { label: 'Perpajakan', href: '#pajak' },
-  { label: 'Audit', href: '#audit' },
-  { label: 'Legalitas', href: '#legalitas' },
-  { label: 'Harga', href: '#harga' },
+  { label: 'Layanan', href: '#layanan' },
+  { label: 'Mengapa Kami', href: '#mengapa' },
+  { label: 'Alur Kerja', href: '#alur-kerja' },
+  { label: 'Estimasi Biaya', href: '#estimasi' },
+  { label: 'Kontak', href: '#kontak' },
 ]
 
 export default function Navbar() {
@@ -28,7 +28,7 @@ export default function Navbar() {
           />
           <div>
             <p className="font-display text-[18px] font-semibold leading-tight text-cream">
-              ANBI Consulting
+              {COMPANY.brandName}
             </p>
             <p className="text-[13px] leading-tight text-gold-soft">
               {COMPANY.legalName}

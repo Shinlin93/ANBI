@@ -1,26 +1,35 @@
-import ImagePlaceholder from './ImagePlaceholder.jsx'
 import Reveal from './motion/Reveal.jsx'
 
-const LOGO_SLOTS = [1, 2, 3, 4, 5, 6]
+const CLIENT_SEGMENTS = [
+  'UMKM & Usaha Perorangan',
+  'Startup & Usaha Rintisan',
+  'CV & Firma',
+  'Perseroan Terbatas (PT)',
+  'Yayasan & Perkumpulan',
+  'Koperasi',
+  'Perusahaan Dagang',
+  'Manufaktur & Industri',
+  'Profesional & Ekspatriat',
+]
 
 export default function ClientLogos() {
   return (
-    <section className="border-b border-cream-dim bg-white py-10" aria-label="Klien kami">
+    <section className="border-b border-cream-dim bg-white py-10" aria-label="Segmen klien kami">
       <div className="container-content">
-        <Reveal className="flex flex-col items-center gap-6 sm:flex-row sm:gap-10" y={12}>
+        <Reveal className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-10" y={12}>
           <p className="eyebrow shrink-0">Klien Kami</p>
-          <div className="grid w-full grid-cols-3 gap-6 sm:grid-cols-6 sm:gap-8">
-            {LOGO_SLOTS.map((n, i) => (
+          <p className="shrink-0 text-[13px] text-ink/60 sm:hidden">
+            Kami melayani berbagai bentuk dan skala usaha.
+          </p>
+          <div className="flex flex-wrap gap-2.5">
+            {CLIENT_SEGMENTS.map((segment, i) => (
               <Reveal
-                key={n}
-                delay={i * 0.05}
-                y={10}
-                className="h-10 w-full grayscale opacity-70 transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                key={segment}
+                delay={i * 0.04}
+                y={8}
+                className="rounded-full border border-cream-dim bg-cream/60 px-3.5 py-1.5 text-[12.5px] font-medium text-ink/75 transition-colors duration-200 hover:border-gold hover:text-navy-deep"
               >
-                <ImagePlaceholder
-                  assetKey={`client-logo-${n}`}
-                  alt={`Logo klien ${n}`}
-                />
+                {segment}
               </Reveal>
             ))}
           </div>

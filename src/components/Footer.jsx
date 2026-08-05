@@ -1,16 +1,18 @@
 import { COMPANY } from '../data/company.js'
 
 const SERVICE_LINKS = [
-  { label: 'Akuntansi & Pembukuan', href: '#akuntansi' },
-  { label: 'Perpajakan', href: '#pajak' },
-  { label: 'Audit & Asurans', href: '#audit' },
-  { label: 'Legalitas & Perizinan', href: '#legalitas' },
+  { label: 'Pendirian & Legalitas', href: '#pendirian' },
+  { label: 'Perizinan Usaha', href: '#perizinan' },
+  { label: 'Akuntansi & Pajak', href: '#akuntansi' },
+  { label: 'HR & Ekspatriat', href: '#hr' },
+  { label: 'Audit & Konsultasi', href: '#audit' },
 ]
 
 const COMPANY_LINKS = [
-  { label: 'Tentang Kami', href: '#' },
-  { label: 'Harga', href: '#harga' },
-  { label: 'Wawasan & Regulasi', href: '#' },
+  { label: 'Layanan', href: '#layanan' },
+  { label: 'Mengapa Kami', href: '#mengapa' },
+  { label: 'Alur Kerja', href: '#alur-kerja' },
+  { label: 'Estimasi Biaya', href: '#estimasi' },
   { label: 'Kontak', href: '#kontak' },
 ]
 
@@ -23,11 +25,11 @@ export default function Footer() {
         <div className="mb-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <p className="mb-3.5 font-display text-lg font-semibold text-cream">
-              ANBI Consulting
+              {COMPANY.brandName}
             </p>
             <p className="max-w-xs leading-relaxed">
-              {COMPANY.legalName} — konsultan akuntansi, pajak, audit, dan
-              legalitas usaha berbasis di Surabaya, Jawa Timur.
+              {COMPANY.legalName} — konsultan legalitas, perizinan, pajak,
+              dan SDM usaha berbasis di Sidoarjo, Jawa Timur.
             </p>
           </div>
 
@@ -61,6 +63,7 @@ export default function Footer() {
             <p className="mb-3.5 text-sm font-semibold text-cream">Kontak</p>
             <ul className="space-y-2">
               <li>{COMPANY.email}</li>
+              <li>{COMPANY.website}</li>
               <li>{COMPANY.address.city}, {COMPANY.address.province}</li>
               <li>{COMPANY.hours}</li>
             </ul>

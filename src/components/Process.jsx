@@ -6,19 +6,19 @@ import Reveal from './motion/Reveal.jsx'
 // across the four steps.
 const STEP_STYLES = [
   { border: 'border-teal', number: 'text-teal', hoverBorder: 'hover:border-teal' },
-  { border: 'border-stamp', number: 'text-stamp', hoverBorder: 'hover:border-stamp' },
+  { border: 'border-gold', number: 'text-gold', hoverBorder: 'hover:border-gold' },
   { border: 'border-plum', number: 'text-plum', hoverBorder: 'hover:border-plum' },
   { border: 'border-forest', number: 'text-forest', hoverBorder: 'hover:border-forest' },
 ]
 
 export default function Process() {
   return (
-    <section className="section-padding bg-cream">
+    <section id="alur-kerja" className="section-padding bg-cream">
       <div className="container-content">
         <Reveal className="mb-11 max-w-[640px]">
-          <span className="eyebrow">Cara Kerja</span>
+          <span className="eyebrow">Alur Kerja Kami</span>
           <h2 className="mt-3 font-display text-[32px] font-semibold text-navy-deep">
-            Empat langkah menuju kepatuhan yang tenang
+            Proses yang sederhana, transparan, dan terdokumentasi
           </h2>
         </Reveal>
 

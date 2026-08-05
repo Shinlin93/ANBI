@@ -6,20 +6,21 @@ import ImagePlaceholder from './ImagePlaceholder.jsx'
 
 export default function PillarsOverview() {
   return (
-    <section className="section-padding bg-cream" aria-labelledby="pillars-heading">
+    <section id="layanan" className="section-padding bg-cream" aria-labelledby="pillars-heading">
       <div className="container-content">
         <Reveal className="mb-12 max-w-[640px]">
-          <span className="eyebrow">Keahlian Kami</span>
+          <span className="eyebrow">Layanan Kami</span>
           <h2 id="pillars-heading" className="mt-3 font-display text-[32px] font-semibold text-navy-deep">
-            Empat pilar kepatuhan bisnis Anda
+            Lima bidang layanan inti kami
           </h2>
           <p className="mt-3.5 text-[15.5px] text-ink/70">
-            Dari pembukuan harian hingga legalitas usaha — semua kebutuhan
-            administrasi bisnis Anda ada dalam satu atap.
+            Solusi satu pintu untuk kebutuhan legalitas dan administrasi
+            bisnis Anda — dari pendirian usaha hingga kepatuhan pajak dan
+            ketenagakerjaan.
           </p>
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {CATEGORIES.map((cat, i) => {
             const theme = CATEGORY_THEME[cat.id]
             return (
