@@ -38,7 +38,7 @@ export default function ServiceCategory({ category, isLast }) {
             <Reveal key={service.title} delay={(i % 3) * 0.07}>
               <SpotlightCard
                 spotlightColor={theme.spotlight}
-                className="card-lift flex h-full gap-4 rounded-md border border-cream-dim bg-white py-6 pr-[20px] shadow-[0_1px_3px_rgba(15,23,42,0.05)]"
+                className="card-lift flex h-full gap-4 rounded-md border border-cream-dim bg-white px-6 py-6 shadow-[0_1px_3px_rgba(15,23,42,0.05)]"
               >
                 {/* Garis aksen sebagai elemen flex biasa (bukan absolute)
                     supaya tidak pernah menabrak teks di sebelahnya. */}
