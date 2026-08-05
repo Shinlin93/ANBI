@@ -1,161 +1,201 @@
 export const CATEGORIES = [
   {
-    id: 'akuntansi',
+    id: 'pendirian',
     num: '01',
-    name: 'Akuntansi & Pembukuan',
-    title: 'Akuntansi & Pembukuan',
+    name: 'Pendirian & Legalitas',
+    title: 'Pendirian & Legalitas',
     description:
-      'Pembukuan rapi dan laporan keuangan yang bisa dipercaya — dasar dari setiap keputusan bisnis, pengajuan kredit, dan pelaporan pajak yang akurat.',
+      'Mendirikan badan usaha dan mengurus legalitas sejak awal — cepat, lengkap, dan sesuai regulasi yang berlaku.',
     services: [
       {
-        title: 'Pembukuan Bulanan',
+        title: 'Pendirian PT, CV, dan Firma',
         description:
-          'Pencatatan transaksi, jurnal, dan buku besar disusun rutin setiap bulan sesuai standar akuntansi.',
+          'Pengurusan akta pendirian hingga terbit di sistem AHU, lengkap dengan SK Kemenkumham.',
       },
       {
-        title: 'Penyusunan Laporan Keuangan',
+        title: 'Perubahan Akta & Anggaran Dasar',
         description:
-          'Neraca, laba rugi, dan arus kas disusun sesuai SAK EMKM/ETAP, siap untuk bank atau investor.',
+          'Perubahan susunan pengurus, modal, atau ketentuan anggaran dasar perusahaan Anda.',
       },
       {
-        title: 'Rekonsiliasi Bank & Kas',
+        title: 'Pembubaran Perusahaan',
         description:
-          'Pencocokan mutasi rekening dan kas fisik untuk memastikan tidak ada selisih yang terlewat.',
+          'Pendampingan proses likuidasi dan pembubaran badan usaha sesuai prosedur hukum.',
       },
       {
-        title: 'Laporan Manajemen',
+        title: 'NPWP Badan & EFIN',
         description:
-          'Ringkasan kinerja bulanan yang mudah dibaca pemilik usaha untuk mengambil keputusan cepat.',
+          'Pendaftaran NPWP badan usaha dan aktivasi EFIN untuk kebutuhan pelaporan pajak.',
       },
       {
-        title: 'Virtual CFO / Advisory Keuangan',
+        title: 'Domisili Usaha',
         description:
-          'Pendampingan strategi keuangan, anggaran, dan proyeksi cash flow tanpa perlu merekrut CFO tetap.',
+          'Pengurusan keterangan domisili sebagai dasar legalitas alamat operasional usaha.',
       },
       {
-        title: 'Migrasi & Perapihan Pembukuan',
+        title: 'Yayasan & Perkumpulan',
         description:
-          'Merapikan pembukuan yang tertinggal atau berantakan dari sistem lama ke pencatatan yang tertib.',
+          'Pendirian dan legalitas yayasan maupun perkumpulan untuk kebutuhan nonprofit.',
       },
     ],
   },
   {
-    id: 'pajak',
+    id: 'perizinan',
     num: '02',
-    name: 'Perpajakan',
-    title: 'Perpajakan',
+    name: 'Perizinan Usaha',
+    title: 'Perizinan Usaha',
     description:
-      'Kepatuhan pajak yang tenang tanpa drama — dari pendaftaran, pelaporan rutin, hingga pendampingan saat diperiksa.',
+      'Mengurus seluruh izin operasional usaha Anda, dari izin dasar hingga izin sektor yang spesifik.',
     services: [
       {
-        title: 'Pendaftaran NPWP & PKP',
+        title: 'NIB melalui OSS-RBA',
         description:
-          'Pengurusan NPWP badan/pribadi dan pengukuhan Pengusaha Kena Pajak untuk memulai kewajiban pajak dengan benar.',
+          'Penerbitan Nomor Induk Berusaha sebagai identitas dan legalitas dasar pelaku usaha.',
       },
       {
-        title: 'Lapor SPT Masa Bulanan',
+        title: 'Sertifikat Standar & Izin Sektor',
         description:
-          'Perhitungan dan pelaporan PPh 21/23/25 serta PPN melalui Coretax setiap bulan, tepat waktu.',
+          'Pengurusan sertifikat standar dan izin usaha sesuai klasifikasi sektor bisnis Anda.',
       },
       {
-        title: 'Lapor SPT Tahunan',
+        title: 'Izin Edar & Sertifikasi Produk',
         description:
-          'Penyusunan dan pelaporan SPT Tahunan Badan atau Orang Pribadi sesuai tenggat DJP.',
+          'Pendampingan izin edar dan sertifikasi produk sebelum dipasarkan ke konsumen.',
       },
       {
-        title: 'Perencanaan Pajak (Tax Planning)',
+        title: 'PBG & SLF (Bangunan)',
         description:
-          'Strategi legal untuk mengelola beban pajak seefisien mungkin sesuai struktur bisnis Anda.',
+          'Pengurusan Persetujuan Bangunan Gedung dan Sertifikat Laik Fungsi untuk properti usaha.',
+      },
+      {
+        title: 'Izin Lingkungan (SPPL/UKL-UPL)',
+        description:
+          'Pengurusan dokumen lingkungan sesuai skala dan dampak kegiatan usaha.',
+      },
+      {
+        title: 'Perizinan Usaha B3 & Limbah',
+        description:
+          'Pendampingan izin pengelolaan bahan berbahaya dan beracun serta limbah usaha.',
+      },
+    ],
+  },
+  {
+    id: 'akuntansi',
+    num: '03',
+    name: 'Akuntansi & Pajak',
+    title: 'Akuntansi & Pajak',
+    description:
+      'Pembukuan rapi dan kepatuhan pajak yang terjaga, dari laporan bulanan hingga pendampingan pemeriksaan.',
+    services: [
+      {
+        title: 'Pembukuan & Laporan Keuangan',
+        description:
+          'Pencatatan transaksi dan penyusunan laporan keuangan bulanan yang akurat.',
+      },
+      {
+        title: 'SPT Masa (PPN, PPh) & Tahunan',
+        description:
+          'Penghitungan dan pelaporan SPT masa maupun tahunan tepat waktu.',
+      },
+      {
+        title: 'Perencanaan Pajak',
+        description:
+          'Strategi perpajakan yang efisien dan sesuai dengan ketentuan yang berlaku.',
       },
       {
         title: 'Pendampingan Pemeriksaan Pajak',
         description:
-          'Mendampingi korespondensi dan pemeriksaan dari kantor pajak agar prosesnya berjalan lancar.',
+          'Mendampingi proses pemeriksaan dan korespondensi dengan otoritas pajak.',
       },
       {
-        title: 'e-Faktur & Bukti Potong',
+        title: 'Rekonsiliasi & Pembenahan Data',
         description:
-          'Penerbitan faktur pajak dan bukti potong yang rapi dan sesuai ketentuan terbaru.',
+          'Merapikan kembali data keuangan yang tertinggal atau tidak konsisten.',
+      },
+      {
+        title: 'Laporan untuk Perbankan',
+        description:
+          'Penyusunan laporan keuangan sesuai format yang dibutuhkan untuk pengajuan kredit.',
+      },
+    ],
+  },
+  {
+    id: 'hr',
+    num: '04',
+    name: 'HR & Ekspatriat',
+    title: 'HR & Ekspatriat',
+    description:
+      'Administrasi ketenagakerjaan lokal dan asing, dari kontrak kerja hingga perizinan tenaga kerja.',
+    services: [
+      {
+        title: 'Kontrak Kerja & Peraturan Perusahaan',
+        description:
+          'Penyusunan kontrak kerja dan peraturan perusahaan sesuai ketentuan ketenagakerjaan.',
+      },
+      {
+        title: 'Payroll & BPJS',
+        description:
+          'Pengelolaan penggajian serta pendaftaran dan iuran BPJS Ketenagakerjaan & Kesehatan.',
+      },
+      {
+        title: 'Rekrutmen & Administrasi SDM',
+        description:
+          'Dukungan administrasi kepegawaian dari proses rekrutmen hingga onboarding.',
+      },
+      {
+        title: 'Visa Kerja & KITAS',
+        description:
+          'Pengurusan visa kerja dan Kartu Izin Tinggal Terbatas untuk tenaga kerja asing.',
+      },
+      {
+        title: 'RPTKA & Perizinan TKA',
+        description:
+          'Pengurusan Rencana Penggunaan Tenaga Kerja Asing beserta izin pendukungnya.',
+      },
+      {
+        title: 'Pendampingan Kepatuhan Tenaga Kerja',
+        description:
+          'Memastikan seluruh administrasi ketenagakerjaan sesuai regulasi terkini.',
       },
     ],
   },
   {
     id: 'audit',
-    num: '03',
-    name: 'Audit & Asurans',
-    title: 'Audit & Asurans',
+    num: '05',
+    name: 'Audit & Konsultasi',
+    title: 'Audit & Konsultasi',
     description:
-      'Keyakinan independen atas laporan keuangan Anda — untuk kebutuhan internal, perbankan, tender, maupun investor.',
+      'Pemeriksaan kepatuhan dan pendampingan strategi bisnis untuk fondasi usaha yang lebih kuat.',
     services: [
       {
-        title: 'Audit Laporan Keuangan',
+        title: 'Audit Internal & Review Kepatuhan',
         description:
-          'Pemeriksaan independen atas laporan keuangan tahunan sesuai Standar Audit yang berlaku.',
+          'Pemeriksaan menyeluruh untuk memastikan operasional usaha sesuai standar dan regulasi.',
       },
       {
-        title: 'Audit Internal',
+        title: 'Pembenahan Administrasi Usaha',
         description:
-          'Evaluasi pengendalian internal dan proses operasional untuk menutup celah risiko sejak dini.',
+          'Merapikan sistem dan dokumen administrasi bisnis yang belum tertata.',
       },
       {
-        title: 'Due Diligence Keuangan',
+        title: 'Analisis Kelayakan Usaha',
         description:
-          'Pemeriksaan menyeluruh sebelum akuisisi, kerja sama, atau pengajuan pendanaan.',
+          'Kajian kelayakan untuk pengembangan usaha atau lini bisnis baru.',
       },
       {
-        title: 'Review Kepatuhan',
+        title: 'Pendampingan Strategi Bisnis',
         description:
-          'Penilaian kesesuaian praktik akuntansi dan pajak perusahaan terhadap regulasi terkini.',
+          'Diskusi dan pendampingan strategi struktur usaha serta pengembangan bisnis.',
       },
       {
-        title: 'Prosedur yang Disepakati (AUP)',
+        title: 'Perjanjian & Kontrak Kerja Sama',
         description:
-          'Pemeriksaan atas pos tertentu sesuai permintaan khusus, misalnya untuk keperluan tender.',
+          'Penyusunan perjanjian kerja sama dan dokumen kontrak bisnis yang mengikat secara hukum.',
       },
       {
-        title: 'Kesiapan Audit (Audit Readiness)',
+        title: 'Konsultasi Berkelanjutan (Retainer)',
         description:
-          'Merapikan dokumen dan pembukuan sebelum audit resmi agar prosesnya lebih cepat dan murah.',
-      },
-    ],
-  },
-  {
-    id: 'legalitas',
-    num: '04',
-    name: 'Legalitas & Perizinan',
-    title: 'Legalitas & Perizinan Usaha',
-    description:
-      'Dari pendirian badan usaha hingga izin operasional — semua legalitas diurus agar bisnis Anda sah dan siap berkembang.',
-    services: [
-      {
-        title: 'Pendirian PT & CV',
-        description:
-          'Pembuatan akta, pengesahan Kemenkumham, hingga NPWP badan — siap beroperasi secara legal.',
-      },
-      {
-        title: 'Pengurusan NIB & OSS',
-        description:
-          'Pendaftaran Nomor Induk Berusaha dan izin usaha melalui sistem OSS Risk Based Approach.',
-      },
-      {
-        title: 'Izin Usaha Khusus',
-        description:
-          'Pengurusan izin sektoral (industri, perdagangan, limbah B3, dan lainnya) sesuai bidang usaha.',
-      },
-      {
-        title: 'Perubahan Anggaran Dasar',
-        description:
-          'Perubahan susunan pengurus, modal, atau alamat perusahaan secara legal dan tercatat.',
-      },
-      {
-        title: 'Domisili & Virtual Office',
-        description:
-          'Penyediaan alamat domisili resmi untuk kebutuhan legalitas dan korespondensi usaha.',
-      },
-      {
-        title: 'Konsultasi Struktur Bisnis',
-        description:
-          'Saran struktur kepemilikan dan badan usaha yang paling sesuai dengan rencana bisnis Anda.',
+          'Pendampingan rutin sebagai mitra konsultasi jangka panjang bagi usaha Anda.',
       },
     ],
   },

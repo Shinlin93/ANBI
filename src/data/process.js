@@ -1,26 +1,25 @@
 export const PROCESS_STEPS = [
   {
-    idx: '01',
+    idx: 'LANGKAH 1',
     title: 'Konsultasi Awal',
-    description:
-      'Diskusi gratis 30 menit untuk memahami kondisi dan kebutuhan bisnis Anda.',
+    description: 'Kami memahami kebutuhan, kondisi, dan target usaha Anda.',
   },
   {
-    idx: '02',
+    idx: 'LANGKAH 2',
     title: 'Penawaran & Kesepakatan',
     description:
-      'Kami susun paket dan harga yang sesuai, tanpa biaya tersembunyi.',
+      'Lingkup kerja, biaya, dan estimasi waktu disepakati secara tertulis.',
   },
   {
-    idx: '03',
-    title: 'Pengerjaan',
+    idx: 'LANGKAH 3',
+    title: 'Pengurusan & Update',
     description:
-      'Tim kami mulai bekerja — pembukuan, pajak, atau perizinan — dengan pelaporan berkala.',
+      'Tim kami mengerjakan penugasan dengan pembaruan progres berkala.',
   },
   {
-    idx: '04',
-    title: 'Review & Pendampingan',
+    idx: 'LANGKAH 4',
+    title: 'Serah Terima & Pendampingan',
     description:
-      'Laporan rutin dan konsultasi lanjutan untuk memastikan bisnis tetap patuh dan berkembang.',
+      'Dokumen diserahkan lengkap, disertai pendampingan pasca-layanan.',
   },
 ]

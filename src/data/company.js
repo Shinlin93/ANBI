@@ -1,19 +1,25 @@
 export const COMPANY = {
-  name: 'ANBI Consulting',
+  brandName: 'ANBI Consulting',
   legalName: 'PT Anara Business International',
-  email: 'info@anbiconsulting.co.id',
-  whatsapp: '628123456789', // ganti dengan nomor WA marketing asli, format: 62xxxxxxxxxxx tanpa tanda + atau 0 di depan
+  tagline: 'Mitra terpercaya untuk legalitas, perizinan, dan pertumbuhan bisnis Anda',
+  mission:
+    'Menjadi mitra jangka panjang bagi UMKM dan perusahaan di Indonesia dalam mengurus legalitas dan kepatuhan usaha.',
+  about:
+    'PT Anara Business International (ANBI Consulting) adalah perusahaan konsultan bisnis dan perizinan yang berbasis di Sidoarjo, Jawa Timur. Kami membantu pelaku usaha dari UMKM hingga perusahaan internasional mengurus legalitas, kepatuhan, dan administrasi bisnis secara lengkap dalam satu pintu.',
+  email: 'Partnership@anbi-consulting.com',
+  website: 'anbi-consulting.co.id',
   address: {
-    city: 'Surabaya',
+    city: 'Sidoarjo',
     province: 'Jawa Timur',
+    country: 'Indonesia',
   },
-  hours: 'Senin–Jumat, 09.00–17.00',
+  hours: 'Senin – Jumat, 09.00 – 17.00 WIB',
   disclaimer:
-    'Konsultan bisnis independen berbasis di Surabaya — bukan bagian dari instansi pemerintah. Layanan resmi tetap dapat diakses langsung melalui DJP, Kemenkumham, dan OSS.',
+    'ANBI Consulting adalah entitas konsultan swasta independen dan bukan bagian dari instansi pemerintah manapun.',
   heroStats: [
-    { value: 4, prefix: '', suffix: '', label: 'Kategori Layanan' },
-    { value: 24, prefix: '', suffix: '+', label: 'Layanan Tersedia' },
-    { value: 750, prefix: 'Rp ', suffix: 'rb', label: 'Mulai dari /bulan' },
-    { value: 100, prefix: '', suffix: '%', label: 'Sesuai Regulasi' },
+    { value: 8, prefix: '', suffix: '+', label: 'Bidang Layanan Terintegrasi' },
+    { value: 5, prefix: '', suffix: '', label: 'Kategori Solusi Utama' },
+    { value: 1, prefix: '', suffix: ' Pintu', label: 'Legalitas, Pajak & SDM' },
+    { value: 4, prefix: '', suffix: ' Langkah', label: 'Proses Kerja Transparan' },
   ],
 }
