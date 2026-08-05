@@ -9,7 +9,9 @@ const SERVICE_LINKS = [
 ]
 
 const COMPANY_LINKS = [
+  { label: 'Tentang Kami', href: '#tentang' },
   { label: 'Layanan', href: '#layanan' },
+  { label: 'Rincian Layanan', href: '#rincian-layanan' },
   { label: 'Mengapa Kami', href: '#mengapa' },
   { label: 'Alur Kerja', href: '#alur-kerja' },
   { label: 'Estimasi Biaya', href: '#estimasi' },

@@ -2,21 +2,20 @@ import { CATEGORIES } from '../data/categories.js'
 import { CATEGORY_THEME } from '../data/categoryTheme.js'
 import Reveal from './motion/Reveal.jsx'
 import SpotlightCard from './motion/SpotlightCard.jsx'
-import ImagePlaceholder from './ImagePlaceholder.jsx'
+import CategoryBadge from './CategoryBadge.jsx'
 
 export default function PillarsOverview() {
   return (
-    <section id="layanan" className="section-padding bg-cream" aria-labelledby="pillars-heading">
+    <section id="rincian-layanan" className="section-padding bg-white" aria-labelledby="pillars-heading">
       <div className="container-content">
         <Reveal className="mb-12 max-w-[640px]">
-          <span className="eyebrow">Layanan Kami</span>
+          <span className="eyebrow">Rincian Layanan</span>
           <h2 id="pillars-heading" className="mt-3 font-display text-[32px] font-semibold text-navy-deep">
             Lima bidang layanan inti kami
           </h2>
           <p className="mt-3.5 text-[15.5px] text-ink/70">
-            Solusi satu pintu untuk kebutuhan legalitas dan administrasi
-            bisnis Anda — dari pendirian usaha hingga kepatuhan pajak dan
-            ketenagakerjaan.
+            Setiap bidang layanan kami uraikan lebih detail di bawah —
+            pilih kategori untuk melihat cakupan pekerjaannya.
           </p>
         </Reveal>
 
@@ -29,14 +28,14 @@ export default function PillarsOverview() {
                   as="a"
                   href={`#${cat.id}`}
                   spotlightColor={theme.spotlight}
-                  className="card-lift group relative flex h-full flex-col rounded-lg border border-cream-dim bg-white p-7"
+                  className="card-lift group relative flex h-full flex-col overflow-hidden rounded-lg border border-cream-dim bg-white p-7"
                 >
-                  <div className={`h-14 w-14 overflow-hidden rounded-md ${theme.badgeBg}`}>
-                    <ImagePlaceholder
-                      assetKey={`pillar-logo-${cat.id}`}
-                      alt=""
-                      className="rounded-md border-none bg-transparent p-2"
-                    />
+                  <span
+                    className={`absolute inset-x-0 top-0 h-[3px] scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${theme.accentBg}`}
+                    aria-hidden="true"
+                  />
+                  <div className={theme.badgeText}>
+                    <CategoryBadge id={cat.id} size={60} />
                   </div>
                   <h3 className="mt-5 font-display text-lg font-semibold text-navy-deep">
                     {cat.name}

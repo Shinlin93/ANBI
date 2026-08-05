@@ -1,6 +1,7 @@
 import ImagePlaceholder from './ImagePlaceholder.jsx'
 import Reveal from './motion/Reveal.jsx'
 import SpotlightCard from './motion/SpotlightCard.jsx'
+import DotGrid from './DotGrid.jsx'
 
 const ADVANTAGES = [
   {
@@ -64,6 +65,7 @@ export default function Advantages() {
           }}
           aria-hidden="true"
         />
+        <DotGrid id="advantages-dot-grid" className="text-cream/[0.05]" gap={26} dot={1.1} />
       </div>
 
       <div className="container-content relative">

@@ -1,5 +1,6 @@
 import Reveal from './motion/Reveal.jsx'
 import SpotlightCard from './motion/SpotlightCard.jsx'
+import CategoryBadge from './CategoryBadge.jsx'
 import { CATEGORY_THEME } from '../data/categoryTheme.js'
 
 export default function ServiceCategory({ category, isLast }) {
@@ -12,8 +13,13 @@ export default function ServiceCategory({ category, isLast }) {
     >
       <div className="container-content">
         <Reveal className="mb-9 flex items-start gap-5">
-          <div className={`mini-stamp-shape ${theme.accentBorder} ${theme.badgeBg}`} aria-hidden="true">
-            <span className={`font-display text-xl font-bold ${theme.badgeText}`}>
+          <div className="relative h-16 w-16 shrink-0">
+            <div className={theme.badgeText}>
+              <CategoryBadge id={category.id} size={64} />
+            </div>
+            <span
+              className={`absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border bg-white font-mono text-[10px] font-bold shadow-sm ${theme.accentBorder} ${theme.badgeText}`}
+            >
               {category.num}
             </span>
           </div>
@@ -32,8 +38,12 @@ export default function ServiceCategory({ category, isLast }) {
             <Reveal key={service.title} delay={(i % 3) * 0.07}>
               <SpotlightCard
                 spotlightColor={theme.spotlight}
-                className="card-lift h-full rounded-md border border-cream-dim bg-white px-[22px] py-6"
+                className="card-lift relative h-full overflow-hidden rounded-md border border-cream-dim bg-white px-[22px] py-6"
               >
+                <span
+                  className={`absolute left-0 top-0 h-full w-[3px] ${theme.accentBg} opacity-70`}
+                  aria-hidden="true"
+                />
                 <span className={`font-mono text-xs font-semibold ${theme.badgeText}`} aria-hidden="true">
                   {String(i + 1).padStart(2, '0')}
                 </span>

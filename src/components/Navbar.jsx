@@ -5,9 +5,9 @@ import { WA_LINK } from '../utils/whatsapp.js'
 import MagneticButton from './motion/MagneticButton.jsx'
 
 const NAV_LINKS = [
+  { label: 'Tentang', href: '#tentang' },
   { label: 'Layanan', href: '#layanan' },
   { label: 'Mengapa Kami', href: '#mengapa' },
-  { label: 'Alur Kerja', href: '#alur-kerja' },
   { label: 'Estimasi Biaya', href: '#estimasi' },
   { label: 'Kontak', href: '#kontak' },
 ]

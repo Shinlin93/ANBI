@@ -4,6 +4,7 @@ import Reveal from './motion/Reveal.jsx'
 import SplitText from './motion/SplitText.jsx'
 import MagneticButton from './motion/MagneticButton.jsx'
 import CountUp from './motion/CountUp.jsx'
+import DotGrid from './DotGrid.jsx'
 import { COMPANY } from '../data/company.js'
 import { WA_LINK } from '../utils/whatsapp.js'
 
@@ -60,10 +61,12 @@ const FLOATING_CARDS = [
 export default function Hero() {
   return (
     <section className="relative overflow-hidden mesh-navy py-20 text-cream md:py-24">
+      <DotGrid id="hero-dot-grid" className="text-cream/[0.06]" gap={26} dot={1.2} />
       {/* Ambient floating background blobs */}
       <div className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] animate-float-slow rounded-full border border-gold-soft/[0.18]" aria-hidden="true" />
       <div className="pointer-events-none absolute -right-16 -top-16 h-[420px] w-[420px] animate-float-slow-reverse rounded-full border border-gold-soft/[0.12]" aria-hidden="true" />
       <div className="pointer-events-none absolute -left-24 bottom-[-140px] h-[360px] w-[360px] animate-float-slow-reverse rounded-full border border-plum/[0.25]" aria-hidden="true" />
+      <div className="pointer-events-none absolute -left-10 top-[18%] h-[140px] w-[140px] animate-float-slow rounded-full border border-teal/[0.2]" aria-hidden="true" />
 
       <div className="container-content relative grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         {/* Left: text content */}

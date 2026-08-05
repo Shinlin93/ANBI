@@ -2,6 +2,7 @@ import { WA_LINK } from '../utils/whatsapp.js'
 import Reveal from './motion/Reveal.jsx'
 import SplitText from './motion/SplitText.jsx'
 import MagneticButton from './motion/MagneticButton.jsx'
+import DotGrid from './DotGrid.jsx'
 
 const TRUST_BADGES = [
   { label: 'Konsultasi Awal Gratis' },
@@ -13,6 +14,7 @@ export default function SecondaryCTA() {
 
   return (
     <section className="relative overflow-hidden bg-cream py-20 md:py-28">
+      <DotGrid id="secondary-cta-dot-grid" className="text-navy-deep/[0.03]" gap={30} dot={1.1} />
       <div
         className="pointer-events-none absolute right-[-60px] top-1/2 h-[280px] w-[280px] -translate-y-1/2 animate-float-slow rounded-full border border-teal/15 sm:h-[360px] sm:w-[360px]"
         aria-hidden="true"

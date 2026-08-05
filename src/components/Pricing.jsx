@@ -3,10 +3,15 @@ import { WA_LINK } from '../utils/whatsapp.js'
 import Reveal from './motion/Reveal.jsx'
 import SpotlightCard from './motion/SpotlightCard.jsx'
 import MagneticButton from './motion/MagneticButton.jsx'
+import DotGrid from './DotGrid.jsx'
 
 export default function Pricing() {
   return (
     <section id="estimasi" className="relative overflow-hidden mesh-navy py-16 text-cream md:py-24">
+      <DotGrid id="pricing-dot-grid" className="text-cream/[0.05]" gap={30} dot={1.2} />
+      <div className="pointer-events-none absolute -left-28 top-1/3 h-[300px] w-[300px] animate-float-slow-reverse rounded-full border border-gold-soft/[0.14]" aria-hidden="true" />
+      <div className="pointer-events-none absolute -right-16 bottom-[-100px] h-[260px] w-[260px] animate-float-slow rounded-full border border-teal/[0.16]" aria-hidden="true" />
+
       <div className="container-content relative">
         <Reveal className="mb-12 max-w-[640px]">
           <span className="eyebrow-on-navy">Estimasi Biaya</span>
@@ -25,8 +30,12 @@ export default function Pricing() {
             <Reveal key={item.title} delay={i * 0.1}>
               <SpotlightCard
                 spotlightColor="rgba(228, 199, 122, 0.10)"
-                className="flex h-full flex-col rounded-lg border border-navy-line bg-cream/[0.03] p-8"
+                className="relative flex h-full flex-col overflow-hidden rounded-lg border border-navy-line bg-cream/[0.03] p-8"
               >
+                <span
+                  className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full border border-gold-soft/20"
+                  aria-hidden="true"
+                />
                 <span className="font-mono text-xs uppercase tracking-wide text-gold-soft">
                   0{i + 1}
                 </span>
