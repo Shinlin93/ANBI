@@ -41,11 +41,14 @@ export const CATEGORY_THEME = {
     spotlight: 'rgba(91, 74, 138, 0.16)',
   },
   audit: {
-    badgeBg: 'bg-navy-deep/10',
+  badgeBg: 'bg-navy-deep/10',
   badgeText: 'text-navy-deep',
   accentBorder: 'border-navy-deep',
   accentBg: 'bg-navy-deep',
-  sectionTint: 'bg-navy-deep/[0.045]',
-  spotlight: 'rgba(20, 44, 74, 0.14)'
+
+  sectionTint: 'bg-slate-100',
+
+  spotlight: 'rgba(20,44,74,0.14)',
+
   },
 }
