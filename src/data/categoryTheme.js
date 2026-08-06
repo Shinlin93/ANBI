@@ -1,11 +1,15 @@
-// Warna aksen per kategori — supaya tiap section terasa punya identitas
-// sendiri. Semua class Tailwind ditulis LENGKAP (bukan digabung dari
-// variabel/string manipulation) supaya tetap terdeteksi oleh Tailwind JIT
-// scanner saat build.
+// Warna aksen per kategori — dipakai untuk badge, ikon, dan garis aksen
+// supaya tiap section tetap punya identitas visual. Semua class Tailwind
+// ditulis LENGKAP (bukan digabung dari variabel/string manipulation)
+// supaya tetap terdeteksi oleh Tailwind JIT scanner saat build.
 //
-// sectionTint sengaja dibuat sebagai tint warna kategori yang sangat lembut
-// (bukan bg-cream/bg-white polos) supaya kartu putih di atasnya terlihat
-// kontras dan lebih fokus bagi pengguna, bukan menyatu dengan background.
+// sectionTint SENGAJA diseragamkan (bukan ikut warna kategori) — versi
+// sebelumnya yang ikut warna kategori (misal merah muda untuk Audit)
+// terlihat kurang harmonis. Nuansa biru-abu netral ini kontras jelas
+// dengan kartu putih di semua section, dan terasa lebih profesional &
+// konsisten dipakai berulang.
+
+const NEUTRAL_SECTION_TINT = 'bg-navy-deep/[0.035]'
 
 export const CATEGORY_THEME = {
   pendirian: {
@@ -13,7 +17,7 @@ export const CATEGORY_THEME = {
     badgeText: 'text-teal',
     accentBorder: 'border-teal',
     accentBg: 'bg-teal',
-    sectionTint: 'bg-teal/[0.045]',
+    sectionTint: NEUTRAL_SECTION_TINT,
     spotlight: 'rgba(14, 110, 119, 0.14)',
   },
   perizinan: {
@@ -21,7 +25,7 @@ export const CATEGORY_THEME = {
     badgeText: 'text-gold',
     accentBorder: 'border-gold',
     accentBg: 'bg-gold',
-    sectionTint: 'bg-gold/[0.06]',
+    sectionTint: NEUTRAL_SECTION_TINT,
     spotlight: 'rgba(228, 199, 122, 0.16)',
   },
   akuntansi: {
@@ -29,7 +33,7 @@ export const CATEGORY_THEME = {
     badgeText: 'text-forest',
     accentBorder: 'border-forest',
     accentBg: 'bg-forest',
-    sectionTint: 'bg-forest/[0.045]',
+    sectionTint: NEUTRAL_SECTION_TINT,
     spotlight: 'rgba(45, 106, 79, 0.14)',
   },
   hr: {
@@ -37,18 +41,15 @@ export const CATEGORY_THEME = {
     badgeText: 'text-plum',
     accentBorder: 'border-plum',
     accentBg: 'bg-plum',
-    sectionTint: 'bg-plum/[0.05]',
+    sectionTint: NEUTRAL_SECTION_TINT,
     spotlight: 'rgba(91, 74, 138, 0.16)',
   },
   audit: {
- badgeBg: 'bg-navy-deep/10',
-  badgeText: 'text-navy-deep',
-  accentBorder: 'border-navy-deep',
-  accentBg: 'bg-navy-deep',
-
-  sectionTint: 'bg-slate-100',
-
-  spotlight: 'rgba(20,44,74,0.14)',
-
+    badgeBg: 'bg-stamp/10',
+    badgeText: 'text-stamp',
+    accentBorder: 'border-stamp',
+    accentBg: 'bg-stamp',
+    sectionTint: NEUTRAL_SECTION_TINT,
+    spotlight: 'rgba(178, 66, 46, 0.14)',
   },
 }
