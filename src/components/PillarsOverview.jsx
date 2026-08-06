@@ -3,17 +3,19 @@ import { CATEGORY_THEME } from '../data/categoryTheme.js'
 import Reveal from './motion/Reveal.jsx'
 import SpotlightCard from './motion/SpotlightCard.jsx'
 import CategoryBadge from './CategoryBadge.jsx'
+import DotGrid from './DotGrid.jsx'
 
 export default function PillarsOverview() {
   return (
-    <section id="rincian-layanan" className="section-padding bg-cream" aria-labelledby="pillars-heading">
-      <div className="container-content">
+    <section id="rincian-layanan" className="relative overflow-hidden mesh-navy py-16 text-cream md:py-24" aria-labelledby="pillars-heading">
+      <DotGrid id="pillars-dot-grid" className="text-cream/[0.05]" gap={28} dot={1.2} />
+      <div className="container-content relative">
         <Reveal className="mb-12 max-w-[640px]">
-          <span className="eyebrow">Rincian Layanan</span>
-          <h2 id="pillars-heading" className="mt-3 font-display text-[32px] font-semibold text-navy-deep">
+          <span className="eyebrow-on-navy">Rincian Layanan</span>
+          <h2 id="pillars-heading" className="mt-3 font-display text-[32px] font-semibold text-cream">
             Lima bidang layanan inti kami
           </h2>
-          <p className="mt-3.5 text-[15.5px] text-ink/70">
+          <p className="mt-3.5 text-[15.5px] text-cream/70">
             Setiap bidang layanan kami uraikan lebih detail di bawah —
             pilih kategori untuk melihat cakupan pekerjaannya.
           </p>
@@ -28,7 +30,7 @@ export default function PillarsOverview() {
                   as="a"
                   href={`#${cat.id}`}
                   spotlightColor={theme.spotlight}
-                  className="card-lift group relative flex h-full flex-col overflow-hidden rounded-lg border border-cream-dim bg-white p-7 shadow-[0_1px_3px_rgba(15,23,42,0.05)]"
+                  className="glass-dark card-lift group relative flex h-full flex-col overflow-hidden rounded-lg p-7"
                 >
                   <span
                     className={`absolute inset-x-0 top-0 h-[3px] scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${theme.accentBg}`}
@@ -37,16 +39,16 @@ export default function PillarsOverview() {
                   <div className={theme.badgeText}>
                     <CategoryBadge id={cat.id} size={60} />
                   </div>
-                  <h3 className="mt-5 font-display text-lg font-semibold text-navy-deep">
+                  <h3 className="mt-5 font-display text-lg font-semibold text-cream">
                     {cat.name}
                   </h3>
-                  <p className="mt-1.5 text-[13px] leading-relaxed text-ink/70">
+                  <p className="mt-1.5 text-[13px] leading-relaxed text-cream/70">
                     {cat.description}
                   </p>
 
                   <ul className="mt-4 flex-1 space-y-1.5">
                     {cat.services.slice(0, 3).map((service) => (
-                      <li key={service.title} className="flex items-start gap-2 text-[12.5px] text-ink/80">
+                      <li key={service.title} className="flex items-start gap-2 text-[12.5px] text-cream/80">
                         <svg className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${theme.badgeText}`} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                           <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7 7a1 1 0 01-1.4 0l-3-3a1 1 0 111.4-1.4L9 11.6l6.3-6.3a1 1 0 011.4 0z" clipRule="evenodd" />
                         </svg>
@@ -56,7 +58,7 @@ export default function PillarsOverview() {
                   </ul>
 
                   <span
-                    className={`absolute bottom-5 right-5 flex h-8 w-8 items-center justify-center rounded-full bg-cream transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${theme.badgeText}`}
+                    className={`absolute bottom-5 right-5 flex h-8 w-8 items-center justify-center rounded-full bg-navy-deep/60 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${theme.badgeText}`}
                     aria-hidden="true"
                   >
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

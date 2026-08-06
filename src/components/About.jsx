@@ -38,27 +38,27 @@ const FOCUS_BLOCKS = [
 
 export default function About() {
   return (
-    <section id="tentang" className="relative overflow-hidden bg-white py-20 md:py-28" aria-labelledby="about-heading">
-      <DotGrid id="about-dot-grid" className="text-navy-deep/[0.035]" gap={30} dot={1.1} />
+    <section id="tentang" className="relative overflow-hidden mesh-navy py-20 text-cream md:py-28" aria-labelledby="about-heading">
+      <DotGrid id="about-dot-grid" className="text-cream/[0.05]" gap={30} dot={1.1} />
       <div
-        className="pointer-events-none absolute -right-24 -top-24 h-[280px] w-[280px] rounded-full border border-gold/15"
+        className="pointer-events-none absolute -right-24 -top-24 h-[280px] w-[280px] rounded-full border border-gold-soft/15"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -left-16 bottom-[-80px] h-[220px] w-[220px] rounded-full border border-teal/15"
+        className="pointer-events-none absolute -left-16 bottom-[-80px] h-[220px] w-[220px] rounded-full border border-teal/20"
         aria-hidden="true"
       />
 
       <div className="container-content relative">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <Reveal>
-            <span className="eyebrow">Tentang ANBI</span>
-            <h2 id="about-heading" className="mt-3 font-display text-[32px] font-semibold text-navy-deep">
+            <span className="eyebrow-on-navy">Tentang ANBI</span>
+            <h2 id="about-heading" className="mt-3 font-display text-[32px] font-semibold text-cream">
               Melampaui sekadar perizinan —
               <br />
               membangun fondasi bisnis yang kuat
             </h2>
-            <p className="mt-4 max-w-[480px] text-[15.5px] leading-relaxed text-ink/70">
+            <p className="mt-4 max-w-[480px] text-[15.5px] leading-relaxed text-cream/75">
               PT Anara Business International (ANBI Consulting) adalah
               perusahaan konsultan bisnis dan perizinan yang berbasis di
               Sidoarjo, Jawa Timur. Kami membantu pelaku usaha dari UMKM
@@ -71,26 +71,22 @@ export default function About() {
             {FOCUS_BLOCKS.map((block, i) => (
               <Reveal key={block.label} delay={i * 0.1}>
                 <SpotlightCard
-                  spotlightColor="rgba(228, 199, 122, 0.08)"
-                  className="card-lift relative flex items-start gap-5 overflow-hidden rounded-lg border border-cream-dim bg-white p-6"
+                  spotlightColor="rgba(228, 199, 122, 0.10)"
+                  className="glass-dark card-lift flex items-start gap-5 rounded-lg p-6"
                 >
-                  <span
-                    className="pointer-events-none absolute -right-4 -top-4 h-16 w-16 rounded-full bg-gold/[0.06]"
-                    aria-hidden="true"
-                  />
-                  <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-soft/15 text-gold-soft">
                     <svg width="20" height="20" viewBox="0 0 24 24">
                       {block.icon}
                     </svg>
                   </span>
-                  <div className="relative">
-                    <p className="font-mono text-[11px] font-semibold uppercase tracking-wide text-gold">
+                  <div>
+                    <p className="font-mono text-[11px] font-semibold uppercase tracking-wide text-gold-soft">
                       {block.label}
                     </p>
-                    <h3 className="mt-1 font-display text-[17px] font-semibold text-navy-deep">
+                    <h3 className="mt-1 font-display text-[17px] font-semibold text-cream">
                       {block.title}
                     </h3>
-                    <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink/70">
+                    <p className="mt-1.5 text-[13.5px] leading-relaxed text-cream/75">
                       {block.description}
                     </p>
                   </div>

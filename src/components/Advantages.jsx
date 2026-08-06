@@ -71,8 +71,8 @@ export default function Advantages() {
       <div className="container-content relative">
         <Reveal>
           <p className="eyebrow-on-navy text-center">Mengapa ANBI</p>
-          <h2 id="advantages-heading" className="sr-only">
-            Mengapa Memilih ANBI Consulting
+          <h2 id="advantages-heading" className="mt-3 text-center font-display text-[32px] font-semibold text-cream sm:text-[36px]">
+            Kenapa Klien Memilih Kami
           </h2>
         </Reveal>
 

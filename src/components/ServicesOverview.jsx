@@ -1,5 +1,6 @@
 import Reveal from './motion/Reveal.jsx'
 import SpotlightCard from './motion/SpotlightCard.jsx'
+import DotGrid from './DotGrid.jsx'
 
 const SERVICES = [
   {
@@ -78,23 +79,24 @@ const SERVICES = [
 // Class Tailwind ditulis LENGKAP per warna (bukan digabung dari variabel)
 // supaya terdeteksi Tailwind JIT scanner saat build.
 const ACCENT_STYLES = {
-  teal: { bar: 'bg-teal', badgeBg: 'bg-teal/10', badgeText: 'text-teal' },
-  gold: { bar: 'bg-gold', badgeBg: 'bg-gold/15', badgeText: 'text-gold' },
-  forest: { bar: 'bg-forest', badgeBg: 'bg-forest/10', badgeText: 'text-forest' },
-  plum: { bar: 'bg-plum', badgeBg: 'bg-plum/10', badgeText: 'text-plum' },
-  stamp: { bar: 'bg-stamp', badgeBg: 'bg-stamp/10', badgeText: 'text-stamp' },
+  teal: { bar: 'bg-teal', badgeBg: 'bg-teal/20', badgeText: 'text-teal' },
+  gold: { bar: 'bg-gold', badgeBg: 'bg-gold/20', badgeText: 'text-gold-soft' },
+  forest: { bar: 'bg-forest', badgeBg: 'bg-forest/20', badgeText: 'text-forest' },
+  plum: { bar: 'bg-plum', badgeBg: 'bg-plum/20', badgeText: 'text-plum' },
+  stamp: { bar: 'bg-stamp', badgeBg: 'bg-stamp/20', badgeText: 'text-stamp' },
 }
 
 export default function ServicesOverview() {
   return (
-    <section id="layanan" className="section-padding bg-cream" aria-labelledby="services-heading">
-      <div className="container-content">
+    <section id="layanan" className="relative overflow-hidden mesh-navy py-16 text-cream md:py-24" aria-labelledby="services-heading">
+      <DotGrid id="services-dot-grid" className="text-cream/[0.05]" gap={28} dot={1.2} />
+      <div className="container-content relative">
         <Reveal className="mb-12 max-w-[640px]">
-          <span className="eyebrow">Layanan Kami</span>
-          <h2 id="services-heading" className="mt-3 font-display text-[32px] font-semibold text-navy-deep">
+          <span className="eyebrow-on-navy">Layanan Kami</span>
+          <h2 id="services-heading" className="mt-3 font-display text-[32px] font-semibold text-cream">
             Solusi satu pintu untuk kebutuhan bisnis Anda
           </h2>
-          <p className="mt-3.5 text-[15.5px] text-ink/70">
+          <p className="mt-3.5 text-[15.5px] text-cream/70">
             Solusi satu pintu untuk kebutuhan legalitas dan administrasi
             bisnis Anda.
           </p>
@@ -107,7 +109,7 @@ export default function ServicesOverview() {
               <Reveal key={service.title} delay={i * 0.06}>
                 <SpotlightCard
                   spotlightColor="rgba(228, 199, 122, 0.10)"
-                  className="card-lift group relative h-full overflow-hidden rounded-lg border border-cream-dim bg-white p-6 shadow-[0_1px_3px_rgba(15,23,42,0.05)]"
+                  className="glass-dark card-lift group relative h-full overflow-hidden rounded-lg p-6"
                 >
                   <span
                     className={`absolute inset-x-0 top-0 h-[3px] scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${style.bar}`}
@@ -118,10 +120,10 @@ export default function ServicesOverview() {
                       {service.icon}
                     </svg>
                   </span>
-                  <h3 className="mt-4 text-[15.5px] font-semibold text-navy-deep">
+                  <h3 className="mt-4 text-[15.5px] font-semibold text-cream">
                     {service.title}
                   </h3>
-                  <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink/70">
+                  <p className="mt-1.5 text-[12.5px] leading-relaxed text-cream/70">
                     {service.description}
                   </p>
                 </SpotlightCard>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { COMPANY } from '../data/company.js'
 import Reveal from './motion/Reveal.jsx'
 import MagneticButton from './motion/MagneticButton.jsx'
+import DotGrid from './DotGrid.jsx'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000'
 const initialForm = { name: '', phone: '', email: '', message: '' }
@@ -32,8 +33,9 @@ export default function Contact() {
   }
 
   return (
-    <section id="kontak" className="pb-16 pt-0 md:pb-24">
-      <div className="container-content">
+    <section id="kontak" className="relative overflow-hidden mesh-navy py-16 text-cream md:py-24">
+      <DotGrid id="contact-dot-grid" className="text-cream/[0.05]" gap={28} dot={1.2} />
+      <div className="container-content relative">
         {/* CTA band */}
         <Reveal className="flex flex-col items-start justify-between gap-8 rounded-[10px] bg-stamp px-8 py-14 text-cream sm:flex-row sm:items-center sm:px-12">
           <div>
