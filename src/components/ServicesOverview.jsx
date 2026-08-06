@@ -109,7 +109,7 @@ export default function ServicesOverview() {
               <Reveal key={service.title} delay={i * 0.06}>
                 <SpotlightCard
                   spotlightColor="rgba(228, 199, 122, 0.10)"
-                  className="glass-dark card-lift group relative h-full overflow-hidden rounded-lg p-6"
+                  className="border border-white/15 bg-white/[0.08] backdrop-blur-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.35)] card-lift group relative h-full overflow-hidden rounded-lg p-6"
                 >
                   <span
                     className={`absolute inset-x-0 top-0 h-[3px] scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${style.bar}`}

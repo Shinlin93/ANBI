@@ -18,7 +18,7 @@ export default function OneTimeServices() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.1} className="glass-dark overflow-hidden rounded-lg">
+        <Reveal delay={0.1} className="border border-white/15 bg-white/[0.08] backdrop-blur-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.35)] overflow-hidden rounded-lg">
           {VALUE_ITEMS.map((item, i) => (
             <div
               key={item.name}

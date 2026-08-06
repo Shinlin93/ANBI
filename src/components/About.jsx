@@ -72,7 +72,7 @@ export default function About() {
               <Reveal key={block.label} delay={i * 0.1}>
                 <SpotlightCard
                   spotlightColor="rgba(228, 199, 122, 0.10)"
-                  className="glass-dark card-lift flex items-start gap-5 rounded-lg p-6"
+                  className="border border-white/15 bg-white/[0.08] backdrop-blur-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.35)] card-lift flex items-start gap-5 rounded-lg p-6"
                 >
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-soft/15 text-gold-soft">
                     <svg width="20" height="20" viewBox="0 0 24 24">

@@ -30,7 +30,7 @@ export default function PillarsOverview() {
                   as="a"
                   href={`#${cat.id}`}
                   spotlightColor={theme.spotlight}
-                  className="glass-dark card-lift group relative flex h-full flex-col overflow-hidden rounded-lg p-7"
+                  className="border border-white/15 bg-white/[0.08] backdrop-blur-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.35)] card-lift group relative flex h-full flex-col overflow-hidden rounded-lg p-7"
                 >
                   <span
                     className={`absolute inset-x-0 top-0 h-[3px] scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${theme.accentBg}`}
